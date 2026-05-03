@@ -1,0 +1,25 @@
+name: CloudShip Deploy 🚀
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v0.1.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd CloudShip
+            git pull
+            docker stop cloudship-container || true
+            docker rm cloudship-container || true
+            docker build -t cloudship-app .
+            docker run -d -p 3000:3000 --name cloudship-container cloudship-app
