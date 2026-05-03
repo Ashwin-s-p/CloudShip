@@ -22,8 +22,8 @@ jobs:
           ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} "
             cd CloudShip &&
             git pull &&
-            docker stop cloudship-container || true &&
-            docker rm cloudship-container || true &&
+            docker stop \$(docker ps -q) || true &&
+            docker rm \$(docker ps -aq) || true &&
             docker build -t cloudship-app . &&
             docker run -d -p 3000:3000 --name cloudship-container cloudship-app
           "
