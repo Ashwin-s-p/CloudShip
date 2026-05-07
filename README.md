@@ -1,8 +1,27 @@
-# CloudShip – Production-Style DevOps Deployment System
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
+![Docker](https://img.shields.io/badge/Docker-Containerization-blue)
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-black)
+![Nginx](https://img.shields.io/badge/Nginx-Reverse_Proxy-brightgreen)
+![Uptime Kuma](https://img.shields.io/badge/Uptime_Kuma-Monitoring-purple)
+
+#  CloudShip – Production-Style DevOps Deployment System
 
 CloudShip is a production-style DevOps project built using Node.js, Docker, AWS EC2, Nginx, GitHub Actions CI/CD, and monitoring tools.
 
 This project demonstrates real-world deployment practices including containerization, automated deployment pipelines, reverse proxy configuration, health monitoring, logging, and uptime tracking.
+
+---
+
+#  Live Deployment
+
+http://3.110.131.24
+
+---
+
+#  Project Goal
+
+CloudShip was built to understand real-world DevOps workflows including containerization, automated deployment pipelines, reverse proxy setup, health monitoring, logging, and uptime tracking in a production-style cloud environment.
 
 ---
 
@@ -17,6 +36,7 @@ This project demonstrates real-world deployment practices including containeriza
 ✅ Uptime Monitoring using Uptime Kuma  
 ✅ Public Cloud Deployment  
 ✅ Automated Container Deployment  
+✅ Real-Time Monitoring Dashboard  
 
 ---
 
@@ -85,6 +105,30 @@ Example logs:
 GET /
 GET /health
 GET /.env
+GET /wp-admin
+```
+
+---
+
+#  Real-World Traffic Observation
+
+After deploying the application publicly on AWS EC2, the server received automated vulnerability scanning requests targeting common PHP and WordPress paths.
+
+Request logging was used to monitor and analyze incoming traffic patterns in real time.
+
+---
+
+#  Project Structure
+
+```text
+CloudShip/
+│
+├── .github/workflows/
+├── screenshots/
+├── Dockerfile
+├── app.js
+├── package.json
+└── README.md
 ```
 
 ---
@@ -163,10 +207,17 @@ docker run -d -p 3000:3000 --name cloudship-container cloudship-app
 
 ---
 
-#  Live Deployment
+#  Monitoring Setup
 
-Application deployed on AWS EC2 using Docker and Nginx.
+Uptime Kuma is used for continuous health monitoring of the application.
 
+Monitor URL:
+
+```bash
+http://3.110.131.24/health
+```
+
+The monitoring dashboard continuously checks application uptime and response availability.
 
 ---
 
