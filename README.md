@@ -1,4 +1,4 @@
-# 🚀 CloudShip – Production-Style DevOps Deployment System
+# CloudShip – Production-Style DevOps Deployment System
 
 CloudShip is a production-style DevOps project built using Node.js, Docker, AWS EC2, Nginx, GitHub Actions CI/CD, and monitoring tools.
 
@@ -6,7 +6,7 @@ This project demonstrates real-world deployment practices including containeriza
 
 ---
 
-# 📌 Features
+#  Features
 
 ✅ Dockerized Node.js Application  
 ✅ AWS EC2 Deployment  
@@ -20,7 +20,7 @@ This project demonstrates real-world deployment practices including containeriza
 
 ---
 
-# 🛠️ Tech Stack
+#  Tech Stack
 
 - Node.js
 - Express.js
@@ -33,7 +33,7 @@ This project demonstrates real-world deployment practices including containeriza
 
 ---
 
-# 🏗️ Project Architecture
+#  Project Architecture
 
 ```text
 User
@@ -51,7 +51,7 @@ Uptime Kuma Monitoring
 
 ---
 
-# ⚙️ CI/CD Workflow
+#  CI/CD Workflow
 
 1. Developer pushes code to GitHub  
 2. GitHub Actions pipeline triggers automatically  
@@ -63,7 +63,7 @@ Uptime Kuma Monitoring
 
 ---
 
-# ❤️ Health Monitoring
+#  Health Monitoring
 
 The application includes a dedicated health monitoring endpoint:
 
@@ -75,7 +75,7 @@ This endpoint is continuously monitored using Uptime Kuma for uptime tracking an
 
 ---
 
-# 📜 Request Logging
+#  Request Logging
 
 CloudShip includes request-level logging to monitor incoming traffic and observe public internet requests hitting the deployed server.
 
@@ -89,7 +89,7 @@ GET /.env
 
 ---
 
-# 📸 Screenshots
+#  Screenshots
 
 ## 🟢 Application Running
 
@@ -121,7 +121,7 @@ GET /.env
 
 ---
 
-# 🚀 Deployment Steps
+#  Deployment Steps
 
 ## Clone Repository
 
@@ -163,20 +163,10 @@ docker run -d -p 3000:3000 --name cloudship-container cloudship-app
 
 ---
 
-# 🌐 Live Deployment
+#  Live Deployment
 
 Application deployed on AWS EC2 using Docker and Nginx.
 
----
-
-# 📈 Future Improvements
-
-- HTTPS & Custom Domain
-- Terraform Infrastructure Automation
-- Grafana Dashboard
-- Prometheus Metrics
-- ECS & ECR Deployment
-- Load Balancer Integration
 
 ---
 
